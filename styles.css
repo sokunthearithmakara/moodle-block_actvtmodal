@@ -1,0 +1,258 @@
+/* stylelint-disable declaration-no-important */
+#configcmwrapper {
+    margin-left: 50px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#configcmwrapper .activityicon,
+#configtypewrapper .activityicon {
+    width: 25px;
+    height: 25px;
+}
+
+#configtypewrapper tr td:has(input[name=overridetype])~td {
+    filter: grayscale(1) !important;
+}
+
+#configtypewrapper tr:has([name="overridetype"]:checked) td:has(input[name=overridetype])~td {
+    filter: grayscale(0) !important;
+}
+
+#configtypewrapper tr:has([name="config_disabletype"]:checked) td,
+#configtypewrapper tr:has([name="config_disabletype"]:checked) td:has(input[name=overridetype])~td {
+    filter: grayscale(1) !important;
+}
+
+#configcmwrapper .form-check:has([name="config_modcm"]:checked) {
+    filter: grayscale(1) !important;
+}
+
+.activitymodal iframe {
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.activitymodal .modal-content {
+    height: 100dvh;
+}
+
+.activitymodal .modal-dialog {
+    max-width: 1080px;
+    width: calc(100% - 2rem);
+    min-height: 50vh;
+    margin-top: 1.75rem;
+}
+
+.activitymodal:not(.fullscreen) .exitfullscreen {
+    display: none;
+}
+
+.activitymodal.fullscreen .enterfullscreen {
+    display: none;
+}
+
+.activitymodal.fullscreen .modal-dialog {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+}
+
+.activitymodal.fullscreen .modal-content {
+    height: 100% !important;
+    max-height: 100% !important;
+}
+
+body.modal-open:has(.activitymodal) {
+    overflow: hidden !important;
+}
+
+.activitymodal.fullscreen .modal-content {
+    border-radius: 0;
+}
+
+.activitymodal .original-url #am-ca-back-wrapper {
+    display: none;
+}
+
+.path-mod.am-embedactivity :is(.navbar, #page-footer, .drawer-left-toggle, footer, #page-wrapper > nav) {
+    display: none !important;
+}
+
+.path-mod.am-embedactivity .drawer-left-toggle,
+.path-mod.am-embedactivity #theme_boost-drawers-courseindex,
+.path-mod.am-embedactivity .drawer.drawer-left {
+    display: none !important;
+}
+
+.path-mod.am-embedactivity .modal-backdrop.show {
+    z-index: 1;
+}
+
+.path-mod.am-embedactivity.am-hideblock .drawer-toggler.drawer-right-toggle,
+.path-mod.am-embedactivity.am-hideblock .drawer-right {
+    display: none !important;
+}
+
+.path-mod.am-embedactivity.am-hideblock #page.drawers.show-drawer-left  {
+    width: 100% !important;
+}
+
+.path-mod.am-embedactivity.am-hideblock #page.drawers.show-drawer-right {
+    margin-right: 0;
+}
+
+.path-mod.am-embedactivity #page.drawers.show-drawer-left {
+    margin-left: 0;
+}
+
+.path-mod.am-embedactivity :is(#page) {
+    margin-top: 0 !important;
+    padding: 0 !important;
+}
+
+.path-mod.am-embedactivity #topofscroll {
+    margin-top: 1rem !important;
+    padding: 0 !important;
+}
+
+.path-mod.am-embedactivity :is(#topofscroll, #page-header) {
+    padding: 0.5rem !important;
+}
+
+.path-mod.am-embedactivity.am-hidetitle .page-context-header,
+.path-mod.am-embedactivity.am-hidesecondarynav .secondary-navigation,
+.path-mod.am-embedactivity.am-hideblock .block-navigation,
+.path-mod.am-embedactivity.am-hideactivityheader [data-for="page-activity-header"] {
+    display: none !important;
+}
+
+.path-mod.am-embedactivity .region-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+}
+
+.path-mod.am-embedactivity .blockcolumn {
+    display: none;
+}
+
+.path-mod.am-embedactivity [role="main"]~* {
+    display: none !important;
+}
+
+.path-mod.am-embedactivity.am-hidetitle #maincontent+h2 {
+    display: none !important;
+}
+
+.path-mod.am-embedactivity.am-hidepageheader #page-header {
+    display: none !important;
+}
+
+.path-mod.am-embedactivity.lockscroll {
+    overflow: auto;
+    height: unset;
+}
+
+.path-mod.am-embedactivity #am-embed-activity-container,
+#am-ca-back-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ddd;
+    height: 0;
+    margin: 1rem;
+    z-index: 1014;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#am-ca-back-wrapper {
+    position: absolute;
+}
+
+.path-mod.am-embedactivity #am-embed-activity-container a,
+#am-ca-back-wrapper a {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    background: var(--ivsecondary);
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.path-mod.am-embedactivity .drawer-left,
+.path-mod.am-embedactivity .drawer-right {
+    top: 0;
+    height: 100%;
+}
+
+.path-mod.am-embedactivity .page-wrapper {
+    margin-top: 0;
+}
+
+.path-mod.am-embedactivity #topofscroll~* {
+    display: none !important;
+}
+
+.path-mod.am-embedactivity #topofscroll,
+.path-mod.am-embedactivity .main-inner {
+    width: calc(100% - 2rem) !important;
+}
+
+.am-mr-2 {
+    margin-right: 0.5rem !important;
+}
+
+@media (max-width: 768px) {
+    .activitymodal .modal-dialog {
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .activitymodal #am-ca-header-wrapper h5 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        overflow: hidden;
+        font-size: 1rem;
+    }
+
+    .activitymodal .modal-header .enterfullscreen {
+        display: none;
+    }
+
+    .activitymodal .modal-content {
+        border-radius: 0;
+    }
+}
+
+@keyframes jellyIn {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.activitymodal.am-jelly-anim .modal-dialog {
+    animation: jellyIn 0.5s ease-in-out;
+    transform-origin: center;
+}
