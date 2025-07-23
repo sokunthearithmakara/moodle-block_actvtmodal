@@ -11,16 +11,16 @@
     height: 25px;
 }
 
-#configtypewrapper tr td:has(input[name=overridetype])~td {
+#configtypewrapper tr td:has(input[name=overridetype]) ~ td {
     filter: grayscale(1) !important;
 }
 
-#configtypewrapper tr:has([name="overridetype"]:checked) td:has(input[name=overridetype])~td {
+#configtypewrapper tr:has([name="overridetype"]:checked) td:has(input[name=overridetype]) ~ td {
     filter: grayscale(0) !important;
 }
 
 #configtypewrapper tr:has([name="config_disabletype"]:checked) td,
-#configtypewrapper tr:has([name="config_disabletype"]:checked) td:has(input[name=overridetype])~td {
+#configtypewrapper tr:has([name="config_disabletype"]:checked) td:has(input[name=overridetype]) ~ td {
     filter: grayscale(1) !important;
 }
 
@@ -97,7 +97,7 @@ body.modal-open:has(.activitymodal) {
     display: none !important;
 }
 
-.path-mod.am-embedactivity.am-hideblock #page.drawers.show-drawer-left  {
+.path-mod.am-embedactivity.am-hideblock #page.drawers.show-drawer-left {
     width: 100% !important;
 }
 
@@ -140,11 +140,11 @@ body.modal-open:has(.activitymodal) {
     display: none;
 }
 
-.path-mod.am-embedactivity [role="main"]~* {
+.path-mod.am-embedactivity [role="main"] ~ * {
     display: none !important;
 }
 
-.path-mod.am-embedactivity.am-hidetitle #maincontent+h2 {
+.path-mod.am-embedactivity.am-hidetitle #maincontent + h2 {
     display: none !important;
 }
 
@@ -198,7 +198,7 @@ body.modal-open:has(.activitymodal) {
     margin-top: 0;
 }
 
-.path-mod.am-embedactivity #topofscroll~* {
+.path-mod.am-embedactivity #topofscroll ~ * {
     display: none !important;
 }
 
