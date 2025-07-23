@@ -29,8 +29,6 @@ import ModalEvents from 'core/modal_events';
 import Ajax from 'core/ajax';
 
 export const init = async(blockid, contextid, courseid, userid, canedit) => {
-    window.console.log('init');
-    window.console.log(canedit);
     let str = await import('core/str');
     const bindEvents = (event, selector, func) => {
         $(document).off(event, selector).on(event, selector, func);
@@ -89,7 +87,6 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
         configjson = '{}';
     }
     configjson = JSON.parse(configjson || '{}');
-    window.console.log(configjson);
     let showactivityheader = Object.keys(configjson).length === 0 ? true :
         !configjson.showactivityheader || configjson.showactivityheader != 0;
     let showtitle = configjson.showtitle == 1;
@@ -200,11 +197,7 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                 }
             });
             root.off(ModalEvents.hidden).on(ModalEvents.hidden, async function() {
-                try {
-                    activityModal.destroy();
-                } catch (e) {
-                    window.console.log(e);
-                }
+                activityModal.destroy();
                 $('body').removeClass('modal-open');
                 active = false;
                 modalhidden = true;
