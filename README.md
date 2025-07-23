@@ -1,8 +1,16 @@
 # Activity Modal #
 
-TO-DO Describe the plugin shortly here.
+Display an activity in a popup modal.
 
-TO-DO Provide more detailed description here.
+## Main features ##
+- Displays an activity in a popup modal from a course content link or course index link.
+- Supports all activity types (tested with standard activities).
+- Independent of the theme and course format*.
+- Excludes certain activity types and specific activities.
+
+## Limitations ##
+- Certain course formats (e.g. Tiles) implement their own activity modals on certain activity types. In this case, the feature will be conflicting. In such cases, teachers can disable the popup modal for those activity types.
+- Certain non-standard themes (e.g. Adaptable, Universe) implement a ton of customizations. The embeded activity in the modal may not display the way it should. In such cases, site admins can inject additional CSS in the activity modal settings to fix the issues. Teachers can also inject additional CSS in their specific course.
 
 ## Installing via uploaded ZIP file ##
 
