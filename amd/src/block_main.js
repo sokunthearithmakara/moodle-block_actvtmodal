@@ -115,7 +115,7 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
             e.preventDefault();
             let href = $(this).attr('href');
             // Regex match mod/xxx/view.php?id=xxx
-            let matches = href.match(/mod\/([^\/]+)\/view.php\?id=(\d+)/);
+            let matches = href.match(/mod\/([^/]+)\/view.php\?id=(\d+)/);
             if (!matches) {
                 // Open the link.
                 window.location.href = href;

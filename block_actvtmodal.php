@@ -22,7 +22,6 @@
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_actvtmodal extends block_base {
-
     /**
      * Block initialisation
      */

@@ -22,7 +22,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class restore_actvtmodal_block_task extends restore_block_task {
-
     /**
      * Define (add) particular settings this activity can have
      */
