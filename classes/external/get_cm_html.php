@@ -33,7 +33,7 @@ require_once($CFG->libdir . '/externallib.php');
  */
 class get_cm_html extends external_api {
     /**
-     * Describes the parameters for ivplugin_annotation_add
+     * Describes the parameters for block_actvtmodal
      *
      * @return external_function_parameters
      */
@@ -44,11 +44,9 @@ class get_cm_html extends external_api {
     }
 
     /**
-     * Implementation of web service ivplugin_annotation_add
+     * Implementation of web service block_actvtmodal
      *
-     * @param int $courseid Course ID
-     * @param int $cmid Course Module ID
-     * @param int $userid User ID
+     * @param string $data The data of the response
      * @return array
      */
     public static function execute($data) {
@@ -82,7 +80,7 @@ class get_cm_html extends external_api {
     }
 
     /**
-     * Describes the return value for ivplugin_annotation_add
+     * Describes the return value for block_actvtmodal
      *
      * @return external_single_structure
      */

@@ -34,7 +34,7 @@ require_once($CFG->libdir . '/externallib.php');
  */
 class get_info extends external_api {
     /**
-     * Describes the parameters for ivplugin_annotation_add
+     * Describes the parameters for get_info
      *
      * @return external_function_parameters
      */
@@ -48,7 +48,7 @@ class get_info extends external_api {
     }
 
     /**
-     * Implementation of web service ivplugin_annotation_add
+     * Implementation of web service get_info
      *
      * @param int $courseid Course ID
      * @param int $cmid Course Module ID
@@ -134,7 +134,7 @@ class get_info extends external_api {
     }
 
     /**
-     * Describes the return value for ivplugin_annotation_add
+     * Describes the return value for get_info
      *
      * @return external_single_structure
      */
