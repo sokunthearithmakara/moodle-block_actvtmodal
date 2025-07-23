@@ -25,6 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['actvtmodal:addinstance'] = 'Add an activity modal instance.';
 $string['appearance'] = 'Default appearance';
 $string['css'] = 'CSS';
 $string['css_desc'] = 'Add custom CSS that will be applied to the course module content when the modal is displayed.
@@ -40,12 +41,14 @@ $string['disable'] = 'Disable';
 $string['disablecm'] = 'Disable CM';
 $string['disablepopupbycm'] = 'Module instances';
 $string['disablepopupbytype'] = 'Module types';
+$string['edit'] = 'Edit';
 $string['expand'] = 'Expand';
 $string['moduletype'] = 'Module type';
 $string['narrow'] = 'Narrow';
 $string['openpage'] = 'Open page';
 $string['override'] = 'Override default';
 $string['pluginname'] = 'Activity modal';
+$string['privacy:metadata'] = 'The Activity modal plugin does not store any personal data.';
 $string['showactivityheader'] = 'Show activity header';
 $string['showblock'] = 'Show block';
 $string['showpageheader'] = 'Show page header';
@@ -53,6 +56,3 @@ $string['showsecondarynav'] = 'Show secondary navigation';
 $string['showtitle'] = 'Show title';
 $string['startpage'] = 'Activity home';
 $string['urlparams'] = 'URL parameters';
-$string['actvtmodal:addinstance'] = 'Add an activity modal instance.';
-$string['privacy:metadata'] = 'The Activity modal plugin does not store any personal data.';
-$string['edit'] = 'Edit';
