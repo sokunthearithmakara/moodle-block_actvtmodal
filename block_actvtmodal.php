@@ -55,15 +55,6 @@ class block_actvtmodal extends block_base {
     }
 
     /**
-     * Hide the block header.
-     *
-     * @return bool
-     */
-    public function hide_header() {
-        return true;
-    }
-
-    /**
      * Loads the required JavaScript for the block.
      *
      * @return void
