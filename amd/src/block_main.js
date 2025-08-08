@@ -295,7 +295,7 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                         </button>
                         `);
                 $body.addClass('p-0');
-                $body.append(`<iframe src="${url}" width="100%" frameborder="0" allowfullscreen class="d-none"></iframe>`);
+                $body.append(`<iframe src="${url}" width="100%" frameborder="0" allowfullscreen class="d-none bg-white"></iframe>`);
                 $body.removeClass('overflow-hidden');
 
                 // Run animation frame to get the iframe document.
@@ -333,22 +333,24 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                             }
                             iframe.classList.remove('d-none');
                             // Add the am-embedactivity class to the body.
-                            contentDocument.body.classList.add('am-embedactivity');
+                            let classes = 'am-embedactivity';
                             if (!config.showtitle) {
-                                contentDocument.body.classList.add('am-hidetitle');
+                                classes += ' am-hidetitle';
                             }
                             if (!config.showactivityheader) {
-                                contentDocument.body.classList.add('am-hideactivityheader');
+                                classes += ' am-hideactivityheader';
                             }
                             if (!config.showsecondarynav) {
-                                contentDocument.body.classList.add('am-hidesecondarynav');
+                                classes += ' am-hidesecondarynav';
                             }
                             if (!config.showblock) {
-                                contentDocument.body.classList.add('am-hideblock');
+                                classes += ' am-hideblock';
                             }
                             if (!config.showpageheader) {
-                                contentDocument.body.classList.add('am-hidepageheader');
+                                classes += ' am-hidepageheader';
                             }
+
+                            contentDocument.body.classList.add(classes);
 
                             if (sitecss != '') {
                                 contentDocument.head.innerHTML += '<style>' + sitecss + '</style>';
@@ -366,7 +368,7 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                                 </div>`);
 
                             contentWindow.addEventListener('unload', function() { // We have to reapply styles.
-                                iframe.classList.add('d-none');
+                                iframe.classList.add('d-none bg-white');
                                 timeout = 0;
                                 requestAnimationFrame(checkIframe);
                                 timeoutInterval = setInterval(function() {
@@ -439,7 +441,7 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                     e.preventDefault();
                     $body
                         .find('iframe')
-                        .replaceWith(`<iframe src="${url}" width="100%" frameborder="0" allowfullscreen class="d-none"></iframe>`);
+                        .replaceWith(`<iframe src="${url}" allowfullscreen class="border-0 w-100 d-none bg-white"></iframe>`);
                     iframe = document.querySelector(`.activitymodal iframe`);
                     divloaded = false;
                     timeout = 0;
@@ -462,6 +464,7 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
 
         });
 
+    // Bind events for fullscreen.
     bindEvents('click.AM', '.activitymodal .exitfullscreen', function(e) {
         e.preventDefault();
         $(this).closest('.activitymodal').removeClass('fullscreen');
