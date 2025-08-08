@@ -350,7 +350,7 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                                 classes += ' am-hidepageheader';
                             }
 
-                            contentDocument.body.classList.add(classes);
+                            $(contentDocument.body).addClass(classes);
 
                             if (sitecss != '') {
                                 contentDocument.head.innerHTML += '<style>' + sitecss + '</style>';
@@ -368,7 +368,7 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                                 </div>`);
 
                             contentWindow.addEventListener('unload', function() { // We have to reapply styles.
-                                iframe.classList.add('d-none bg-white');
+                                $(iframe).addClass('d-none bg-white');
                                 timeout = 0;
                                 requestAnimationFrame(checkIframe);
                                 timeoutInterval = setInterval(function() {
