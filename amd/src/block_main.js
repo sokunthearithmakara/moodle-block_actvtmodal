@@ -303,7 +303,6 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                 let divloaded = false;
                 let timeout = 0;
                 let timeoutInterval;
-                let clicklink;
                 let checkIframe = async() => {
                     if (timeout > 15) {
                         clearInterval(timeoutInterval);
@@ -328,7 +327,7 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                             if (!contentDocument.body.classList.contains('cmid-' + id)) {
                                 // Go to the link.
                                 activityModal.hide();
-                                window.location.href = clicklink;
+                                window.location.href = iframe.contentWindow.location.href;
                                 return;
                             }
                             iframe.classList.remove('d-none');
@@ -387,12 +386,6 @@ export const init = async(blockid, contextid, courseid, userid, canedit) => {
                                     }
                                 }, 1000);
                             });
-
-                            $(contentDocument).off('click.AM', 'a[href^="http"]')
-                                .on('click.AM', 'a[href^="http"]', function() {
-                                    clicklink = $(this).attr('href');
-                                });
-
                         } else {
                             requestAnimationFrame(checkIframe);
                         }
