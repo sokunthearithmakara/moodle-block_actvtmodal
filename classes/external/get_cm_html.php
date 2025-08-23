@@ -59,7 +59,9 @@ class get_cm_html extends external_api {
         $courseid = $data->courseid;
         $context = \context_course::instance($courseid);
         self::validate_context($context);
-        require_capability('moodle/course:view', $context);
+
+        require_course_login($courseid);
+
         require_once($CFG->dirroot . '/course/format/lib.php');
 
         $PAGE->set_context($context);
