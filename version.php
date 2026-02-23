@@ -25,8 +25,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_actvtmodal';
-$plugin->release = '0.1.3';
-$plugin->version = 2025080800;
+$plugin->release = '0.1.4';
+$plugin->version = 2026022300;
 $plugin->requires = 2022112800;
 $plugin->maturity = MATURITY_STABLE;
-
+$plugin->supports = [401, 501];
